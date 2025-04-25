@@ -24,7 +24,10 @@
 	<body>
 		<div id="content" class="flex-container column full-center">
 			<header id="header">
-				<h1><svg class="logo"></svg></h1>
+				<h1>
+					<svg class="logo"></svg>
+					<p style="display: none">SPLITTER</p>
+				</h1>
 			</header>
 
 			<main id="main" class="flex-container row">
@@ -48,7 +51,7 @@
 						</div>
 					</div>
 					<div class="flex-container column gap-1">
-						<label for="" class="label">Select Tip %</label>
+						<label class="label">Select Tip %</label>
 						<div id="selectTip" class="grid">
 							<div
 								id="5"
@@ -148,12 +151,12 @@
 						</div>
 						<p id="total-amount" class="amount">$0.00</p>
 					</div>
-					<div class="">
+					<div>
 						<button
 							id="reset"
 							class="btn"
 							onclick="reset()"
-							disabled="true"
+							disabled
 						>
 							RESET
 						</button>
