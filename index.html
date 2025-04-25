@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./src/css/styles.css" />
+		<script src="./src/js/scripts.js" defer></script>
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<div id="content" class="flex-container column full-center">
+			<header id="header">
+				<h1><svg class="logo"></svg></h1>
+			</header>
+
+			<main id="main" class="flex-container row">
+				<div id="form-container" class="flex-container column">
+					<div class="flex-container column gap-1">
+						<label for="bill" class="label">Bill</label>
+						<div class="input-container">
+							<img
+								src="./images/icon-dollar.svg"
+								alt="Dollar Icon"
+							/>
+							<input
+								type="number"
+								id="bill"
+								name="bill"
+								class="input"
+								placeholder="0"
+								oninput="calculate()"
+								required
+							/>
+						</div>
+					</div>
+					<div class="flex-container column gap-1">
+						<label for="" class="label">Select Tip %</label>
+						<div id="selectTip" class="grid">
+							<div
+								id="5"
+								class="percent"
+								onclick="selectPercent(this, 5)"
+							>
+								5%
+							</div>
+							<div
+								id="10"
+								class="percent"
+								onclick="selectPercent(this,10)"
+							>
+								10%
+							</div>
+							<div
+								id="15"
+								class="percent"
+								onclick="selectPercent(this,15)"
+							>
+								15%
+							</div>
+							<div
+								id="25"
+								class="percent"
+								onclick="selectPercent(this,25)"
+							>
+								25%
+							</div>
+							<div
+								id="50"
+								class="percent"
+								onclick="selectPercent(this,50)"
+							>
+								50%
+							</div>
+							<input
+								type="number"
+								id="customPercent"
+								class="custom"
+								name="customPercent"
+								placeholder="Custom"
+								oninput="selectCustomPercent(this)"
+							/>
+						</div>
+					</div>
+					<div class="flex-container column gap-1">
+						<div
+							class="flex-container row"
+							style="justify-content: space-between"
+						>
+							<label for="persons" class="label"
+								>Number of People</label
+							>
+							<p id="error" class="label error" hidden>
+								Can't be zero
+							</p>
+						</div>
+						<div
+							id="input-container-persons"
+							class="input-container"
+						>
+							<img
+								src="./images/icon-person.svg"
+								alt="Person Icon"
+							/>
+							<input
+								type="number"
+								id="persons"
+								name="persons"
+								class="input"
+								placeholder="0"
+								oninput="calculate()"
+								required
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div id="view-container" class="flex-container column">
+					<div class="flex-container row">
+						<div
+							class="flex-container column view-container__header"
+						>
+							<h2>Tip Amount</h2>
+							<p>/ person</p>
+						</div>
+						<p id="tip-amount" class="amount">$0.00</p>
+					</div>
+					<div class="flex-container row">
+						<div
+							class="flex-container column view-container__header"
+						>
+							<h2>Total</h2>
+							<p>/ person</p>
+						</div>
+						<p id="total-amount" class="amount">$0.00</p>
+					</div>
+					<div class="">
+						<button
+							id="reset"
+							class="btn"
+							onclick="reset()"
+							disabled="true"
+						>
+							RESET
+						</button>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<footer class="attribution">
+			<p>
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>
+			</p>
+			<p>
+				Coded by
+				<a href="https://github.com/FCampo7">Francisco Campo</a>
+			</p>
+		</footer>
+	</body>
+</html>
