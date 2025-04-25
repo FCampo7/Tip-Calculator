@@ -77,7 +77,7 @@ body {
 
 .logo {
 	max-width: 100px;
-	margin: 2em 0;
+	margin: 2em 0 0 0;
 	background-image: url("../../images/logo.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
