@@ -210,12 +210,14 @@ body {
 	color: var(--green-900);
 }
 
-.custom .active {
+.custom.active {
 	padding-right: 0.5em;
-	outline: none;
-	color: var(--green-900);
-	border: 2px solid var(--green-400);
 	text-align: end;
+
+	outline: none;
+
+	background-color: var(--grey-50);
+	border: 2px solid var(--green-400);
 }
 
 /* *************
