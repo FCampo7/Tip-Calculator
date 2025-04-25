@@ -8,6 +8,8 @@ function selectPercent(sender, value) {
 	});
 	sender.classList.add("active");
 
+	calculate();
+
 	document.getElementById("reset").toggleAttribute("disabled", false);
 }
 
@@ -15,7 +17,7 @@ function selectCustomPercent(sender) {
 	percent = parseFloat(sender.value);
 	if (isNaN(percent) || percent < 0) {
 		percent = 0;
-		sender.value = 0;
+		sender.value = null;
 	} else if (percent > 100) {
 		percent = 100;
 		sender.value = 100;
@@ -25,6 +27,8 @@ function selectCustomPercent(sender) {
 		if (item !== null) item.classList.remove("active");
 	});
 	sender.classList.add("active");
+
+	calculate();
 
 	document.getElementById("reset").toggleAttribute("disabled", false);
 }
