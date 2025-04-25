@@ -230,6 +230,7 @@ body {
 	background-color: var(--green-900);
 
 	border-radius: 10px;
+	justify-content: space-between;
 }
 
 .view-container__header h2 {
@@ -240,6 +241,10 @@ body {
 .view-container__header p {
 	font-size: 12px;
 	color: var(--grey-500);
+}
+
+.text-container {
+	height: 6em;
 }
 
 .amount {
